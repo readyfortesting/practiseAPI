@@ -94,7 +94,7 @@ public class GetRequestP12 extends JsonPlaceHolderTestBase {
                 "title",equalTo(expectedData.get("title")),
                 "completed",equalTo(expectedData.get("completed")));
 
-           //2.Assertion yondemi JsonPath ile Assertion (JsonPath Assertopn'da CASTING gerekmiyor)
+           //2.Assertion yondemi JsonPath ile Assertion (JsonPath Assertopn'da CASTING gerekmiyor) Map gerekmiyor!
         JsonPath jsonPath=response.jsonPath();
         Assert.assertEquals(expectedData.get("statusCode"),response.statusCode()); //1.kisma expected data,2.kisma Actual data yazilir.
         Assert.assertEquals(expectedData.get("via"),response.getHeader("via"));
@@ -109,11 +109,18 @@ public class GetRequestP12 extends JsonPlaceHolderTestBase {
              "id": 2,
              "title": "quis ut nam facilis et officia qui",
              "completed": false                  }  */
-
+        System.out.println("-------------------------");
         //3.Assertion yondemi DE-SERIALIZATION.
+             // Key'ler String seklinde,Value'lar da degisebiliyordu(String,int,boolean) bunlarin hepsini KAPSAYAN Object yapariz!!!!
+         HashMap<String,Object>  actualData=response.as(HashMap.class);  //response'dan gelen yaniti actudaldataya aktarmak icin =>>>  response.as(HashMap.class);
+             // Bu satir ile DE-SARIALIZATION islemi yapmis olduk !!!!!!!!!
+        System.out.println("actual data :"+actualData);// actualData yazdiralim
+       //actual data :{id=2, completed=false, title=quis ut nam facilis et officia qui, userId=1}
 
-
-
+         //Assertion (kod'lar daha da azaldi)
+        Assert.assertEquals(expectedData.get("userId"),actualData.get("userId"));
+        Assert.assertEquals(expectedData.get("title"),actualData.get("title"));
+        Assert.assertEquals(expectedData.get("completed"),actualData.get("completed"));
 
     }
 }

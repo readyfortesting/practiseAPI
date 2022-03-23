@@ -1,0 +1,28 @@
+
+Serialization - De-Serialization-
+
+Java'da olusturdugumuz bir nesneyi veya sinifi, saklamak ya da transfer etmek istedigimiz formata
+donusturme islemine Serialization denir.
+
+**Bunun tam tersi duruma ise De-Serialization denir.
+Yani API'da donen response'u Map,List of Map, Set gibi Java objelerine cevirme islemidir.
+Bu islemi yapabilmek icin asagidaki kutuphaneleri kullanmak gerekir.
+
+-----------------------------
+       -1-
+
+<dependency>
+<groupId>com.google.code.gson</groupId>
+>gson</artifactId>
+
+-----------------------------
+       -2-
+
+<dependency>
+<groupId>org.codehaus.jackson</groupId>
+>jackson-mapper-asl</artifactId>
+
+-----------------------------
+
+De-Serialization-
+
