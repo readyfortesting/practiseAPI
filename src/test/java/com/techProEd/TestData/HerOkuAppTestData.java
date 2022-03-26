@@ -1,5 +1,6 @@
 package com.techProEd.TestData;
 
+import com.google.gson.JsonObject;
 import org.json.JSONObject;
 
 import java.util.HashMap;
@@ -19,17 +20,18 @@ public class HerOkuAppTestData {
 
     */
 
-    public HashMap<String, Object> setUpTestData() {
-        HashMap<String, Object> bookingDates = new HashMap<String, Object>();
-        bookingDates.put("checkin", "2021-07-04");
-        bookingDates.put("checkout", "2021-09-02");
+    public HashMap<String, Object> setUpTestData(){
 
-        HashMap<String, Object> expectedData = new HashMap<String, Object>();
-        expectedData.put("firstname", "Sally");
-        expectedData.put("lastname", "Ericsson");
-        expectedData.put("totalprice", 613);
-        expectedData.put("depositpaid", true);
-        expectedData.put("bookingdates", bookingDates); // yukarida olusturdugumuz bookingdate;yi yazdik.
+        HashMap<String ,Object> bookingdates=new HashMap<String, Object>();
+        bookingdates.put("checkin","2016-07-28");
+        bookingdates.put("checkout","2020-03-26");
+
+        HashMap<String ,Object> expectedData=new HashMap<String, Object>();
+        expectedData.put("firstname","Sally");
+        expectedData.put("lastname","Smith");
+        expectedData.put("totalprice",716);
+        expectedData.put("depositpaid",false);
+        expectedData.put("bookingdates",bookingdates); // yukarida olusturdugumuz bookingdate;yi yazdik.
 
 
         return expectedData;
@@ -81,16 +83,16 @@ yani Nested Map olusturmus olacagiz.
 public JSONObject setUpTestAndRequestData(){
     //Json object olusturacagiz,once ictekinden baslanir bookingdates
 
-    JSONObject bookingDates=new JSONObject(); //Burda datatype'ni (String,Object,Int,Boolean) yazmiyoruz o kendisi karar verecek.
-    bookingDates.put("checking","2016-06-16");   //JSONObject yapisi da degerleri Key Value seklinde alir.
-    bookingDates.put("checkout","2018-06-07");
+    JSONObject bookingdates=new JSONObject(); //Burda datatype'ni (String,Object,Int,Boolean) yazmiyoruz o kendisi karar verecek.
+    bookingdates.put("checkin","2021-01-05");   //JSONObject yapisi da degerleri Key Value seklinde alir.
+    bookingdates.put("checkout","2021-01-10");
 
-    JSONObject expectedRequest = new JSONObject();
-    expectedRequest.put("firstname","Batch44");
+    JSONObject expectedRequest =new JSONObject();
+    expectedRequest.put("firstname","Batch30");
     expectedRequest.put("lastname","bitti");
     expectedRequest.put("totalprice",123);
     expectedRequest.put("depositpaid",false);
-    expectedRequest.put("bookingdates",bookingDates);
+    expectedRequest.put("bookingdates",bookingdates);
 
     return expectedRequest; // returnType : JSONObject olacak.
 }
