@@ -1,7 +1,5 @@
 package com.techProEd.TestData;
 
-import org.json.JSONObject;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -70,7 +68,8 @@ olduğunu test edin.
      */
 
     public HashMap<String, Integer> setUpTestData02(){
-
+        //HashMap<String, Integer> => yaptik cunku Task'da istenen bilgilerin hepsi int degerinde donecegi icin.
+        //HashMap<String, Object> => donen response'larin String,int,boolean gibi farkli data type'lari oldugunda hepsini KAPSAMASI icin OBJECT yapariz.
         HashMap<String,Integer> expectedData=new HashMap<String, Integer>();
         expectedData.put("statusCode",200);
         expectedData.put("enYuksekMaas",725000);
@@ -80,6 +79,54 @@ olduğunu test edin.
 
 
     }
+
+    // 1- Request body olusturduk.
+    public HashMap<String, String> setUpRequestBody(){
+        HashMap<String,String> requestBody=new HashMap<String,String>();
+        requestBody.put("name","BurakAkyuz");
+        requestBody.put("salary","35000");
+        requestBody.put("age","39");
+
+        return requestBody;
+
+  //HashMap<String,String> Task'ta verilenlerin hepsi String oldugu icin String,String sectik.
+
+    }
+        //2- Expected data olusturulur.
+
+    public HashMap<String, Object> setUpExpectedData(){
+        //RequestBody'de olusturduklarimizi Burada expectedBody olarak olusturup karsilastiriyoruz.Assert ediyoruz.
+        HashMap<String,Object> dataMap=new HashMap<String, Object>();
+        dataMap.put("name","BurakAkyuz");
+        dataMap.put("salary","35000");
+        dataMap.put("age","39");
+
+        HashMap<String,Object> expectedData=new HashMap<String, Object>();
+        expectedData.put("statusCode",200);
+        expectedData.put("status","success");
+     //   expectedData.put("data",dataMap);
+        expectedData.put("message","Successfully! Record has been added.");
+
+        //hepsini kapsayan expectedData dondurur onun icin return type expectedData olur
+
+return expectedData; // hata verir. methodun return type HashMap yazilinca duzelir.
+
+/*
+data          :>>     inner
+expected      :>>     outer
+expected HEPSINI KAPSAR!
+ */
+
+
+
+    }
+
+
+
+
+
+
+
 
 
 
