@@ -1,6 +1,7 @@
 package com.techProEd.Day08;
 
-import com.techProEd.TestBase.HerOkuAppTestBase;
+
+import com.techProEd.TestBase.HerokuAppTestBase;
 import com.techProEd.TestData.HerOkuAppTestData;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
@@ -12,7 +13,7 @@ import java.util.Map;
 
 import static io.restassured.RestAssured.given;
 
-public class GetRequestP13 extends HerOkuAppTestBase {
+public class GetRequestP13 extends HerokuAppTestBase {
     /*  https://restful-booker.herokuapp.com/booking/2  url'ine bir istek gonderildiginde
     donen response body;nin
 {
