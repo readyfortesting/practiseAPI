@@ -1,7 +1,6 @@
 package com.techProEd.Day05;
 
-import com.techProEd.TestBase.HerOkuAppTestBase;
-import io.restassured.http.ContentType;
+import com.techProEd.TestBase.HerokuAppTestBase;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.junit.Assert;
@@ -9,7 +8,7 @@ import org.junit.Test;
 
 import static io.restassured.RestAssured.given;
 
-public class GetRequestP08 extends HerOkuAppTestBase {
+public class GetRequestP08 extends HerokuAppTestBase {
     /*  https://restful-booker.herokuapp.com/booking/5  url'ine
     accept type'i "application/json" olan GET requesti yolladigimda
 
