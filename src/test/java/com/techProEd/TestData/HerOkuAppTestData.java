@@ -1,5 +1,7 @@
 package com.techProEd.TestData;
 
+import org.json.JSONObject;
+
 import java.util.HashMap;
 
 public class HerOkuAppTestData {
@@ -33,7 +35,7 @@ public class HerOkuAppTestData {
         return expectedData;
 
     }
-}
+
 
   /*  https://restful-booker.herokuapp.com/booking/1  url'ine bir istek gonderildiginde
     donen response body;nin
@@ -76,10 +78,26 @@ yani Nested Map olusturmus olacagiz.
    public HashMap<String, Object> setUpTestData() { YAPARIZ.
 
  */
+public JSONObject setUpTestAndRequestData(){
+    //Json object olusturacagiz,once ictekinden baslanir bookingdates
+
+    JSONObject bookingDates=new JSONObject(); //Burda datatype'ni (String,Object,Int,Boolean) yazmiyoruz o kendisi karar verecek.
+    bookingDates.put("checking","2016-06-16");   //JSONObject yapisi da degerleri Key Value seklinde alir.
+    bookingDates.put("checkout","2018-06-07");
+
+    JSONObject expectedRequest = new JSONObject();
+    expectedRequest.put("firstname","Batch44");
+    expectedRequest.put("lastname","bitti");
+    expectedRequest.put("totalprice",123);
+    expectedRequest.put("depositpaid",false);
+    expectedRequest.put("bookingdates",bookingDates);
+
+    return expectedRequest; // returnType : JSONObject olacak.
+}
 
 
 
 
 
 
-
+}
