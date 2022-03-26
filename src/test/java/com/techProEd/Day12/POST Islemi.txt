@@ -1,0 +1,37 @@
+
+ ---------------- POST REQUEST ---------------------
+
+    => Post Request'de  API araciligiyla veritabanina gidip data create islemi yapariz.
+    => Post requesti gonderirken neyi create edecegimizi de gondermemiz gerekir.
+
+    => Get request'te direk url(endpoint) yazdik ve aldik
+    => Post islemi yaparken ayni zamanda BODY gondermemiz gerekiyor.
+    Daha once Resonse'dan donen ile ilgileniyorduk artik GIDEN de bizim icin onemli.
+
+    1- Request body olusturacagiz
+    2- Response body (donen body) Expected body ile ugrasmis olacagiz.
+
+
+     Post isleminde
+     1- endpoint yazilir
+     2- Body tiklanir
+     3- raw tiklanir
+     4- Text / JSON secilir.
+     5- Kutu icine gondermek istedigimiz body yazilir. ( Gondermemiz gereken body Task'tan kopyalanip yapistirilabilir)
+
+        {
+        "name":"Burak Akyuz",
+        "salary":"35000",       <<<<=== REQUEST BODY
+         "age":"39"
+          }
+
+
+data          :>>     inner
+expected      :>>     outer
+expected HEPSINI KAPSAR!
+
+
+   ** Degisiklik yapacaksak
+   1- Authentication  - kimliklendirme
+   2- Authorization   - yetkilendirme   her ikisine de ihtiyac duyariz!!
+
