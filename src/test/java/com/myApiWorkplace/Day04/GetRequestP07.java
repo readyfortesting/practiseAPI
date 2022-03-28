@@ -1,9 +1,7 @@
-package com.techProEd.Day04;
+package com.myApiWorkplace.Day04;
 
-import com.techProEd.TestBase.JsonPlaceHolderTestBase;
-import io.restassured.http.ContentType;
+import com.myApiWorkplace.TestBase.JsonPlaceHolderTestBase;
 import io.restassured.response.Response;
-import org.hamcrest.Matchers;
 import org.junit.Test;
 
 import static io.restassured.RestAssured.given;
