@@ -1,4 +1,4 @@
-package com.techProEd.Day04;
+package com.myApiWorkplace.Day04;
 
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
