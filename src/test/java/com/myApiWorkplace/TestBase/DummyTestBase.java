@@ -1,4 +1,4 @@
-package com.techProEd.TestBase;
+package com.myApiWorkplace.TestBase;
 
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.specification.RequestSpecification;
