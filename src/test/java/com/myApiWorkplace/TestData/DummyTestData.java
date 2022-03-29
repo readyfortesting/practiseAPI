@@ -1,4 +1,6 @@
-package com.techProEd.TestData;
+package com.myApiWorkplace.TestData;
+
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -121,7 +123,26 @@ expected HEPSINI KAPSAR!
 
     }
 
+    /*
+    {
+ "status": "success",
+ "data": "2",
+ "message": "Successfully! Record has been deleted"
+ }
+     */
+public JSONObject setUpDeleteExpectedData(){
+    JSONObject expectedData=new JSONObject();
+    expectedData.put("status","success");
+    expectedData.put("data","2");
+    expectedData.put("message","Successfully! Record has been deleted");
 
+
+    return expectedData;
+
+
+
+
+}
 
 
 
