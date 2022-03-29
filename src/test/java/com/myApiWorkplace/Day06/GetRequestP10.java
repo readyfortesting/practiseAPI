@@ -1,6 +1,6 @@
-package com.techProEd.Day06;
+package com.myApiWorkplace.Day06;
 
-import com.techProEd.TestBase.DummyTestBase;
+import com.myApiWorkplace.TestBase.DummyTestBase;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.junit.Assert;
