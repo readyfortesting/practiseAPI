@@ -1,7 +1,7 @@
-package com.techProEd.Day10;
+package com.myApiWorkplace.Day10;
 
-import com.techProEd.TestBase.DummyTestBase;
-import com.techProEd.TestData.DummyTestData;
+import com.myApiWorkplace.TestBase.DummyTestBase;
+import com.myApiWorkplace.TestData.DummyTestData;
 
 
 import io.restassured.path.json.JsonPath;
@@ -9,7 +9,6 @@ import io.restassured.response.Response;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
