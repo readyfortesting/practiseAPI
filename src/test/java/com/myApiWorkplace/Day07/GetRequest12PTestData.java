@@ -1,7 +1,7 @@
-package com.techProEd.Day07;
+package com.myApiWorkplace.Day07;
 
-import com.techProEd.TestBase.JsonPlaceHolderTestBase;
-import com.techProEd.TestData.JsonPlaceHolderTestData;
+import com.myApiWorkplace.TestBase.JsonPlaceHolderTestBase;
+import com.myApiWorkplace.TestData.JsonPlaceHolderTestData;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.junit.Assert;
