@@ -1,8 +1,8 @@
-package com.techProEd.Day08;
+/* package com.myApiWorkplace.Day08;
 
 
-import com.techProEd.TestBase.HerokuAppTestBase;
-import com.techProEd.TestData.HerOkuAppTestData;
+import com.myApiWorkplace.TestBase.HerokuAppTestBase;
+
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.junit.Assert;
@@ -98,7 +98,7 @@ yani Nested Map olusturmus olacagiz.
 
      }
 
- */
+
 
     @Test
     public void test(){
@@ -156,3 +156,7 @@ yani Nested Map olusturmus olacagiz.
 
 
 }
+
+
+
+ */
