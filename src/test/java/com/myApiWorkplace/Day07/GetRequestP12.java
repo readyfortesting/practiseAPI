@@ -1,9 +1,8 @@
-package com.techProEd.Day07;
+package com.myApiWorkplace.Day07;
 
-import com.techProEd.TestBase.JsonPlaceHolderTestBase;
+import com.myApiWorkplace.TestBase.JsonPlaceHolderTestBase;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import org.hamcrest.Matchers;
 import org.junit.Assert;
 import org.junit.Test;
 
