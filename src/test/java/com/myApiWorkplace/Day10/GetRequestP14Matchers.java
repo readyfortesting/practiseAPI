@@ -1,8 +1,7 @@
-package com.techProEd.Day10;
-import com.techProEd.TestBase.DummyTestBase;
-import com.techProEd.TestData.DummyTestData;
+package com.myApiWorkplace.Day10;
+import com.myApiWorkplace.TestBase.DummyTestBase;
+import com.myApiWorkplace.TestData.DummyTestData;
 import io.restassured.response.Response;
-import org.hamcrest.Matchers;
 import org.junit.Test;
 
 import java.util.HashMap;
