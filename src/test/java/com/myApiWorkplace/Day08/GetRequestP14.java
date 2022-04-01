@@ -1,7 +1,7 @@
-package com.techProEd.Day08;
+package com.myApiWorkplace.Day08;
 
-import com.techProEd.TestBase.DummyTestBase;
-import com.techProEd.TestData.DummyTestData;
+import com.myApiWorkplace.TestBase.DummyTestBase;
+import com.myApiWorkplace.TestData.DummyTestData;
 import io.restassured.response.Response;
 import org.junit.Assert;
 import org.junit.Test;
